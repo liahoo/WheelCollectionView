@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n8O-4s-Jyj">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="VFW-hb-Af3">
+            <objects>
+                <collectionViewController id="iNc-tK-UT2" customClass="CollectionViewController" customModule="CircularCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="whF-69-ubC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Lo9-wF-WOK" customClass="CircularCollectionViewLayout" customModule="CircularCollectionView" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ky4-ef-CsQ">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iNc-tK-UT2" id="SDj-Eo-Xtf"/>
+                            <outlet property="delegate" destination="iNc-tK-UT2" id="XCw-ju-Arf"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPp-oH-fDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="449"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AuS-ZW-w1m">
+            <objects>
+                <viewController id="n8O-4s-Jyj" customClass="ViewController" customModule="CircularCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcL-nJ-dIB"/>
+                        <viewControllerLayoutGuide type="bottom" id="SA6-am-tXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWn-DE-DQb">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-0s-TP5">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="768"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="h78-9k-aB2"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="iAX-6k-d53" customClass="CircularCollectionViewLayout" customModule="CircularCollectionView" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MgG-72-StU" customClass="CircularCollectionViewCell" customModule="CircularCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="34T-0q-ucU">
+                                <rect key="frame" x="701" y="0.0" width="300" height="768"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="v4m-6R-OZ5"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="1z8-4f-JJ3" customClass="CircularCollectionViewLayout" customModule="CircularCollectionView" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0XV-wA-cr6" customClass="CircularCollectionViewCell" customModule="CircularCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="34T-0q-ucU" firstAttribute="height" secondItem="sWn-DE-DQb" secondAttribute="height" id="4aw-PN-T52"/>
+                            <constraint firstItem="34T-0q-ucU" firstAttribute="centerY" secondItem="sWn-DE-DQb" secondAttribute="centerY" id="5mH-xL-iy8"/>
+                            <constraint firstItem="4hd-0s-TP5" firstAttribute="leading" secondItem="sWn-DE-DQb" secondAttribute="leading" id="SJm-Oi-q12"/>
+                            <constraint firstItem="4hd-0s-TP5" firstAttribute="centerY" secondItem="sWn-DE-DQb" secondAttribute="centerY" id="YJw-6n-Mth"/>
+                            <constraint firstAttribute="trailing" secondItem="34T-0q-ucU" secondAttribute="trailing" id="e9G-Ib-c4u"/>
+                            <constraint firstItem="4hd-0s-TP5" firstAttribute="height" secondItem="sWn-DE-DQb" secondAttribute="height" id="gCv-Br-Lpc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewLeft" destination="4hd-0s-TP5" id="L8b-ae-CsG"/>
+                        <outlet property="collectionViewRight" destination="34T-0q-ucU" id="fFf-y4-yzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZzW-p1-X4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366.796875" y="1146.875"/>
+        </scene>
+    </scenes>
+</document>
